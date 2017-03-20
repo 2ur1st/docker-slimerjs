@@ -8,6 +8,7 @@ COPY bin/ /bin
 RUN apk add --no-cache \
 	bash \
 	coreutils \
+	dbus \
 	curl \
 	firefox-esr \
 	fontconfig \
