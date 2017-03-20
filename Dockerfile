@@ -15,4 +15,10 @@ RUN apk add --no-cache \
 	xvfb \
 	&& npm install slimerjs
 
+ENV SLIMERDIR=/node_modules/slimerjs/src
+ENV SLIMERJSLAUNCHER=/usr/bin/firefox
+ENV PATH="/node_modules/.bin/:${PATH}"
+
 WORKDIR /src
+
+ENTRYPOINT ["xvfb-run", "slimerjs"]
